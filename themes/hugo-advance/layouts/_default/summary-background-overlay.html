@@ -1,0 +1,23 @@
+<div class="summary summary-background-overlay {{ if .Params.thumbnail }}summary-has-thumbnail{{ end }} {{ if .Params.icon }}summary-has-icon{{ end }}" style="background-image: url('{{ .Params.thumbnail | relURL }}');" >
+    <a href="{{ .Permalink }}">
+        <div class="summary-content">
+            {{ if .Params.categories }}
+                <div class="summary-category">
+                    {{ partial "components/category-icon.html" . }}
+                </div>
+            {{ end }}
+            {{ if .Params.categories }}
+                <div class="summary-category">
+                    {{ partial "components/category-title.html" . }}
+                </div>
+            {{ end }}
+            <div class="summary-title">
+                <h2>{{ .Title }}</h2>
+            </div>
+            <div class="summary-description">
+                <p>{{ .Params.description | truncate 60 }}</p>
+            </div>
+        </div>
+    </a>
+</div>
+

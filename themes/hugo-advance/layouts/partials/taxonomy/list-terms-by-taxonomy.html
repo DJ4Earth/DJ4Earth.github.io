@@ -1,0 +1,8 @@
+<div>
+    <h2>{{ .heading }}</h2>
+    <ul>
+        {{ range (index .site.Taxonomies .taxonomy) }}
+            <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a><span>({{ .Count }})</span></li>
+        {{ end }}
+    </ul>
+</div>

@@ -1,0 +1,10 @@
+<div class="menu-footer-tertiary">
+    <ul>
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.footer_tertiary }}
+            <li class="menu-item-{{ .Name | urlize }}{{ if $currentPage.IsMenuCurrent "footer_tertiary" . }} active{{ end }}">
+                <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+            </li>
+        {{end}}
+    </ul>
+</div>

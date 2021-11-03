@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Twitter",
+    "fa_icon": "fab fa-twitter",
+    "url": "https://www.zerostatic.io"
+  },
+  {
+    "title": "Github",
+    "fa_icon": "fab fa-github",
+    "url": "https://www.zerostatic.io"
+  },
+  {
+    "title": "Slack",
+    "fa_icon": "fab fa-slack",
+    "url": "https://www.zerostatic.io"
+  }
+]

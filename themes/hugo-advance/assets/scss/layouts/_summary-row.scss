@@ -1,0 +1,14 @@
+.summary.summary-row {
+    flex-direction: row;
+    height: auto;
+    border: none;
+    .summary-thumbnail {
+        max-width: 200px;
+        min-height: auto;
+        padding: 0;
+        margin-right: 30px;
+    }
+    .summary-content {
+        padding: 0;
+    }
+}

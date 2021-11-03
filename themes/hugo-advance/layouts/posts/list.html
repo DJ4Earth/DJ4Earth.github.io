@@ -1,0 +1,54 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-posts-list{{ end }}
+{{ define "header_classes" }}{{ if .Params.header_transparent }}header-transparent{{ end }}{{ end }}
+
+{{ define "main" }}
+
+    {{ if .Params.hero }}
+        {{ partial "components/hero.html" (dict "title" .Title "description" .Params.description "background" .Params.hero.background "blend_mode" .Params.hero.blend_mode "theme" .Params.hero.theme)}}
+    {{ else }}
+        <div class="strip theme-base pb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <h1>{{ .Title }}</h1>
+                        <h2>{{ .Params.description }}</h2>
+                    </div>
+                    {{ if .Params.image }}
+                        <div class="col-12 col-lg-12" style="max-height: 400px; overflow: hidden;">
+                            <img class="img-fluid" src={{ .Params.image | relURL }} />
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    {{ end }}
+
+    <div class="strip theme-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8">
+                    <div class="row">
+                        {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+                        {{ range $paginator.Pages }}
+                            <div class="col-12 mb-3">
+                                {{ .Render "summary-row" }}
+                            </div>
+                        {{ end }}
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                        {{ partial "components/paginator" . }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="sidebar">
+                        {{ partial "taxonomy/list-terms-by-taxonomy" (dict "site" .Site "context" . "taxonomy" "categories" "heading" "Categories") }}
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+{{ end }}

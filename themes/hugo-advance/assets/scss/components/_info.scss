@@ -1,0 +1,123 @@
+.info {
+  .info-content {
+    h1, h2 {
+      @include media-breakpoint-up(lg) {
+        font-family: var(--font-heading);
+        font-size: 34px;
+        line-height: 1.2;
+        font-weight: normal;
+        margin-bottom: 20px;
+        width: 80%;
+      }
+    }
+    p {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      @include media-breakpoint-up(md) {
+        width: 90%;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.55;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 80%;
+      }
+    }
+    .info-buttons {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+      }
+      .button {
+        margin-right: 5px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .info-media {
+    img {
+      border-radius: $border-radius;
+    }
+  }
+  .info-content + .info-media {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include media-breakpoint-up(sm) {
+      margin: 0;
+    }
+  }
+  .info-columns {
+    @include make-row();
+    justify-content: flex-start;
+    .info-content {
+      @include make-col-ready();
+      @include media-breakpoint-up(sm) {
+        @include make-col(6);
+      }
+    }
+    .info-media {
+      @include make-col-ready();
+      @include media-breakpoint-up(sm) {
+        @include make-col(6);
+      }
+    }
+
+    &.info-left {
+      justify-content: flex-start;
+      .info-media {
+        order: 2;
+      }
+      .info-content {
+        order: 1
+      }
+    }
+
+    &.info-right {
+      justify-content: flex-end;
+      .info-media {
+        order: 1;
+      }
+      .info-content {
+        order: 2
+      }
+    }
+
+    &.info-center {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      .info-media {
+        order: 2;
+        @include media-breakpoint-up(sm) {
+          @include make-col(8);
+        }
+        margin-top: 20px;
+      }
+
+      .info-content {
+        order: 1;
+        @include media-breakpoint-up(sm) {
+          @include make-col(8);
+        }
+        h1, h2 {
+          @include media-breakpoint-up(lg) {
+            width: 100%;
+          }
+        }
+        p {
+          @include media-breakpoint-up(md) {
+            width: 100%;
+          }
+          @include media-breakpoint-up(lg) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

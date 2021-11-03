@@ -1,0 +1,114 @@
+.content {
+  font-size: 16px;
+  line-height: 1.56;
+  h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 36px;
+    font-weight: normal;
+  }
+  h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: normal;
+  }
+  h3 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: normal;
+  }
+  h4 {
+    margin-top: 20px;
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: var(--color-base-text-offset);
+  }
+  ul {
+    margin: 20px;
+    list-style: disc;
+  }
+  ol {
+    margin: 20px;
+    list-style: decimal;
+  }
+  li {
+    margin-left: 20px;
+    color: var(--color-base-text-offset);
+  }
+  a {
+    text-decoration: underline;
+  }
+  blockquote {
+    border-left: 5px solid var(--color-primary);
+    margin: 30px 0;
+    padding: 20px;
+  }
+  // blockquote:before {
+  //   font-family: var(--font-heading);
+  //   content: "\201C";
+  //   font-size: 4em;
+  //   line-height: 0.1em;
+  //   margin-right: 0.15em;
+  //   vertical-align: -0.4em;
+  // }
+  // blockquote:after {
+  //   content: "\201D";
+  //   font-family: var(--font-heading);
+  //   font-size: 4em;
+  //   line-height: 0.1em;
+  //   margin-left: 0.15em;
+  //   vertical-align: -0.4em;
+  // }
+  blockquote p {
+    font-size: 20px;
+    display: inline;
+    color: var(--color-base-text);
+  }
+  img {
+    margin: 40px 0 40px 0;
+    max-width: 100%;
+    height: auto;
+    @include media-breakpoint-up(md) {
+      margin: 60px 0 60px 0;
+    }
+  }
+  figure {
+    margin: 2.6rem 0 1.18rem;
+    img {
+      margin: 0;
+    }
+    figcaption {
+      margin-top: 10px;
+      h4 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      p {
+        margin: 0;
+        color: var(--color-primary-offset)-light;
+      }
+    }
+  }
+  code,
+  pre {
+    font-family: $font-family-monospace;
+  }
+  .highlight {
+    pre {
+      border-radius: 3px;
+      font-size: 14px;
+      line-height: 18px;
+      padding: 30px;
+      overflow: auto;
+      font-family: $font-family-monospace;
+    }
+  }
+}

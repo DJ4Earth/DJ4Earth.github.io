@@ -1,0 +1,18 @@
+<div class="summary summary-background {{ if .Params.thumbnail }}summary-has-thumbnail{{ end }} {{ if .Params.icon }}summary-has-icon{{ end }}" style="background-image: url('{{ .Params.thumbnail | relURL }}');" >
+    <a href="{{ .Permalink }}">
+        <div class="summary-content">
+            {{ if .Params.portfolio }}
+                <div class="summary-category">
+                    {{ partial "taxonomy/portfolio-icons.html" . }}
+                </div>
+            {{ end }}
+            <div class="summary-title">
+                <h2>{{ .Title }}</h2>
+            </div>
+            <div class="summary-description">
+                <p>{{ .Params.description | truncate 40 }}</p>
+            </div>
+        </div>
+    </a>
+</div>
+

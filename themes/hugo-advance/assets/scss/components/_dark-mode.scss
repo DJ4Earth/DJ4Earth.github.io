@@ -1,0 +1,41 @@
+.dark-mode {
+  padding: 0 14px;
+  font-size: 10px;
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+  .label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px;
+    position: relative;
+    transform: scale(1.5);
+  }
+
+  .checkbox:checked + label {
+    .fa-moon {
+      display: block;
+    }
+    .fa-sun {
+      display: none;
+    }
+  }
+
+  .fa-moon {
+    display: none;
+  }
+
+  .fa-sun {
+    display: block;
+  }
+}
+
+.dark-mode.animated {
+  .label .ball {
+    transition: transform 0.2s linear;
+  }
+}
+

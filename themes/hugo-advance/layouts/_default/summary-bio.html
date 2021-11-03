@@ -1,0 +1,26 @@
+<div class="summary summary-team {{ if .Params.thumbnail }}summary-has-thumbnail{{ end }} {{ if .Params.icon }}summary-has-icon{{ end }}">
+    {{ if .Params.thumbnail }}
+        <div class="summary-thumbnail">
+            <img src="{{ .Params.thumbnail | relURL }}"/>
+        </div>
+    {{ end }}
+    <div class="summary-content">
+        <div class="summary-title">
+            <h2>{{ .Title }}</h2>
+        </div>
+        <div class="summary-jobtitle">{{ .Params.Jobtitle }}</div>
+        <div class="summary-description">
+            <p>{{ .Params.description }}</p>
+        </div>
+        {{ if .Params.links }}
+            <div class="summary-links">
+                {{ range .Params.links }}
+                    <div>
+                        {{ if .icon }}<i class="{{ .icon }}"></i>{{ end }}
+                        {{ if .label }}<a href="{{ .url }}">{{ .label }}</a>{{ end }}
+                    </div>
+                {{ end }}
+            </div>
+        {{ end }}
+    </div>
+</div>

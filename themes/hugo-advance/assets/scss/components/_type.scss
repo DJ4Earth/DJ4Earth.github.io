@@ -1,0 +1,68 @@
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: lighter;
+  color: inherit;
+  margin-top: 0;
+  margin-bottom: 20px;
+  @include media-breakpoint-up(md) {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-family: var(--font-heading);
+  line-height: 1.4;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 20px;
+  @include media-breakpoint-up(md) {
+    line-height: 1.4;
+  }
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 20px;
+  @include media-breakpoint-up(md) {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+  }
+}
+
+p {
+  font-family: var(--font-base);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+}
+

@@ -1,0 +1,46 @@
+.summary.summary-team {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  height: 100%;
+  padding: 0;
+  background-color: var(--color-base);
+  border: none;
+  border-radius: var(--style-card-border-radius);
+  box-shadow: unset;
+  .summary-thumbnail {
+    a {
+      display: block;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      vertical-align: bottom;
+      border-radius: 50%;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  .summary-jobtitle {
+    margin: 5px 0;
+  }
+  .summary-content {
+    padding: 0;
+  }
+  .summary-links {
+    margin-top: 10px;
+    > div {
+      display: flex;
+      align-items: center;
+      padding: 3px 0;
+      i {
+        margin-right: 5px;
+      }
+      a {
+        
+        display: block;
+      }
+    }
+  }
+}

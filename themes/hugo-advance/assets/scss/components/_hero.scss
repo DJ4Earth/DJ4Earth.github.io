@@ -1,0 +1,58 @@
+.hero {
+  position: relative;
+  background: unset;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: $strip-padding;
+  padding-bottom: $strip-padding;
+  min-height: 300px;
+  @include media-breakpoint-up(md) {
+    min-height: 500px;
+    padding-top: ($strip-padding * 2) + $header-height;
+    padding-bottom: $strip-padding * 2
+  }
+  .hero-text {
+    flex: 0;
+    margin: auto 0;
+    h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      font-weight: lighter;
+      color: inherit;
+      margin-bottom: 20px;
+      @include media-breakpoint-up(md) {
+        font-size: 4rem;
+      }
+    }
+    h2 {
+      color: inherit;
+      font-size: 2.2rem;
+      @include media-breakpoint-up(md) {
+        font-size: 2.4rem;
+      }
+    }
+    p {
+      color: inherit;
+      font-size: 1.4rem;
+      line-height: 1.3;
+      margin-bottom: 0;
+      @include media-breakpoint-up(md) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .hero-image {
+    img {
+      max-width: 100%;
+    }
+    &.hero-image-circle {
+      max-width: 200px;
+      img {
+        border-radius: 100%;
+      }
+    }
+  }
+}
+
+

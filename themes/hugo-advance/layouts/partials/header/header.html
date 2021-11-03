@@ -1,0 +1,20 @@
+<div class="container">
+
+    {{ partial "header/logo.html" . }}
+
+    {{ if .Site.Params.enable_nested_menu }}
+        {{ partial "menu/menu-main-nested.html" . }}
+    {{ else }}
+        {{ partial "menu/menu-main.html" . }}
+    {{ end }}
+
+    <div class="d-none d-md-block">{{ partial "header/language-switcher.html" . }}</div>
+    {{ partial "header/hamburger.html" . }}
+
+    {{ if ne .Site.Params.enable_dark_mode false }}
+    <div class="d-none d-md-block">
+        {{ partial "header/dark-mode.html" . }}
+    </div>
+    {{ end }}
+
+</div>

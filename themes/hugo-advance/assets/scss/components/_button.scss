@@ -1,0 +1,22 @@
+.button {
+  white-space: nowrap;
+  display: inline-block;
+  padding: 8px 18px 9px 18px;
+  background: var(--color-primary);
+  border-radius: 3px;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  border: none;
+  outline: none;
+  &:hover {
+    color: #fff;
+    background-color: var(--color-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+  }
+}

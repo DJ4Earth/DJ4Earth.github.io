@@ -1,0 +1,132 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-home{{ end }}
+{{ define "header_classes" }}{{ if .Params.header_transparent }}header-transparent{{ end }}{{ end }}
+
+{{ define "main" }}
+
+    {{ if .Params.hero }}
+        {{ partial "components/hero.html" (dict "title" .Title "description" .Params.description "background" .Params.hero.background "blend_mode" .Params.hero.blend_mode "theme" .Params.hero.theme)}}
+    {{ end }}
+
+    {{ if .Params.intro.enabled }}
+        <div class="strip theme-base">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        {{ partial "components/info.html" .Params.intro }}
+                    </div>
+                </div>
+                {{ if .Params.intro.partners.enabled }}
+                {{ $partners := .Site.Data.partners }}
+                    {{ if gt (len $partners) 0}}
+                        <div class="row justify-content-center align-items-center pt-3 pt-md-6">
+                            {{ range .Site.Data.partners }}
+                                <div class="col-4 col-lg-2 text-center mb-1 mt-1">
+                                    <img style="max-width: 100px;" src="{{ .image | relURL }}" alt="{{ .title }}"/>
+                                </div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    {{ end }}
+
+    <!-- Show a list of 'research' -->
+    {{ if .Params.research.enabled }}
+        {{ $section := $.Site.GetPage "section" "research" }}
+        {{ $pages := where $.Site.RegularPages "Type" "research" }}
+        {{ $limit := .Params.research.limit | default 3 }}
+        {{ $slider := .Params.research.slider | default false }}
+        {{ if gt (len $pages) 0 }}
+            <div class="strip strip-border-bottom theme-alt">
+                <div class="container">
+                    <div class="strip-heading pb-2">
+                        <h2>{{ $section.Title }}</h2>
+                        {{ if .Params.research.show_view_all }}
+                            <a href="{{ $section.Permalink | relURL }}">{{ i18n "view_all" }}</a>
+                        {{ end }}
+                    </div>
+                    <div class="row {{ if $slider }}slider{{ end }}">
+                        {{ range first $limit $pages }}
+                            <div class="col-12 col-md-6 col-lg-4 {{ if $slider }}mb-0{{ else }}mb-2{{ end }}">
+                                {{ .Render "summary" }}
+                                <!-- 
+                                    Use the full summary if you want to display research with images
+                                    {{ .Render "summary-full" }} 
+                                -->
+                            </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        {{ end }}
+    {{ end }}
+
+    {{ if .Params.work.enabled }}
+        {{ $section := $.Site.GetPage "section" "work" }}
+        {{ $pages := where $.Site.RegularPages "Type" "work" }}
+        {{ $limit := .Params.work.limit | default 3 }}
+        {{ $slider := .Params.work.slider | default false }}
+        {{ if gt (len $pages) 0 }}
+        <div class="strip theme-alt">
+            <div class="container">
+                <div class="strip-heading pb-2">
+                    <h2>{{ if .Params.work.label }}{{ .Params.work.label }}{{ else }}{{ $section.Title }}{{ end }}</h2>
+                    {{ if .Params.work.show_view_all }}
+                        <a href="{{ $section.Permalink | relURL }}">{{ i18n "view_all" }}</a>
+                    {{ end }}
+                </div>
+                <div class="row {{ if $slider }}slider{{ end }}">
+                    {{ range first $limit $pages }}
+                        <div class="col-12 col-md-6 col-lg-6 {{ if $slider }}mb-0{{ else }}mb-2{{ end }}">
+                            {{ .Render "summary-background-overlay" }}
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    {{ end }}
+
+    {{ with .Params.outro }}
+        {{ if .enabled }}
+            <div class="strip theme-alt">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            {{ partial "components/info.html" . }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{ end }}
+    {{ end }}
+
+    {{ if .Params.blog.enabled }}
+        {{ $section := $.Site.GetPage "section" "posts" }}
+        {{ $pages := where $.Site.RegularPages "Type" "posts" }}
+        {{ $limit := .Params.blog.limit | default 3 }}
+        {{ $slider := .Params.blog.slider | default false }}
+        {{ if gt (len $pages) 0 }}
+        <div class="strip strip-border-top theme-base">
+            <div class="container">
+                <div class="strip-heading pb-2">
+                    <h2>{{ $section.Title }}</h2>
+                    {{ if .Params.blog.show_view_all }}
+                        <a href="{{ $section.Permalink | relURL }}">{{ i18n "view_all" }}</a>
+                    {{ end }}
+                </div>
+                <div class="row {{ if $slider }}slider{{ end }}">
+                    {{ range first $limit $pages }}
+                        <div class="col-12 col-md-6 col-lg-4 {{ if $slider }}mb-0{{ else }}mb-2{{ end }}">
+                            {{ .Render "summary" }}
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    {{ end }}
+
+{{ end }}
