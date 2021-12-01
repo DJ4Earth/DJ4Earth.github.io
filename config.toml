@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://jdi4earth.github.io"
 title = "JDi4Earth"
 theme = "hugo-advance"
 paginate = 3
