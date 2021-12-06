@@ -1,7 +1,7 @@
 ---
 title: 'Home'
 date: 2019-02-22
-description: 'Welcome to Julia Differentiable Programming for Earth system modeling (JDi4Earth)'
+description: 'Welcome to Differentiable programming in Julia for Earth system modeling (DJ4Earth)'
 header_transparent: true
 hero:
   background: "images/home/arctic-cut-1.jpg"
@@ -15,7 +15,7 @@ intro:
   enabled: true
   align: left
   image: "images/home/eqn-reflected.png"
-  heading: "What is JDi4Earth"
+  heading: "What is DJ4Earth"
   description: Welcome to the NSF CSSI "Collaborative Research - Frameworks - Convergence of Bayesian inverse methods and scientific machine learning in Earth system models through universal differentiable programming". It comprises a team from the University of Texas at Austin, MIT, the University of Chicago, the University of Colorado, Boulder, Dartmouth College, and Argonne National Lab.
   partners:
     enabled: true

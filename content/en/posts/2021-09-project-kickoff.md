@@ -1,5 +1,5 @@
 ---
-title: 'JDi4Earth Kickoff'
+title: 'DJ4Earth Kickoff'
 date: 2021-09-01T10:26:40+10:00
 authors: ['Patrick Heimbach']
 tags: ['Workshop']

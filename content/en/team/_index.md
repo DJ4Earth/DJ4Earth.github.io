@@ -1,6 +1,6 @@
 ---
 title: 'Team'
-description: 'JDi4Earth'
+description: 'DJ4Earth'
 date: 2018-02-12T15:37:57+07:00
 menu:
   main:
