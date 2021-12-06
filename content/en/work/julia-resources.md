@@ -40,10 +40,6 @@ At the heart of differentiable programming is the ability to generate derivative
 
 > We seek to work and communicate through Julia Language's [**Community Channels**](https://www.julialang.org/community/#community_channels)
 
-## Julia Computing
-
-[**Julia Computing**](https://juliacomputing.org) seeks to create and deliver products that make the Julia programming language easy to use, easy to deploy and easy to scale. Its flagship product is JuliaHub, a secure, software-as-a-service platform for developing Julia programs, deploying them, and scaling to thousands of nodes.
-
 
 ## Example (OLD -- TO BE REPLACED)
 
