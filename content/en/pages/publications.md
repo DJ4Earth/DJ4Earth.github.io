@@ -20,6 +20,8 @@ image: 'https://source.unsplash.com/ZW6RUvsaFTc/1140x300'
 
 * Loose, N., & Heimbach, P. (2021). Leveraging Uncertainty Quantification to Design Ocean Climate Observing Systems. Journal of Advances in Modeling Earth Systems, 13(4), 1-25. [doi:10.1029/2020ms002386](https://doi.org/10.1029/2020ms002386)
 
+* Morlighem, M., Goldberg, D., Santos, T. D. dos, Lee, J., and Sagebaum, M. (2021). Mapping the Sensitivity of the Amundsen Sea Embayment to Changes in External Forcings Using Automatic Differentiation. Geophysical Research Letters, 48(23). https://doi.org/10.1029/2021gl095440
+
 * Moses, W. S., Churavy, V., Paehler, L., Hueckelheim, J., Narayanan, S. H. K., Schanen, M., & Doerfert, J. (2021). Reverse-Mode Automatic Differentiation and Optimization of GPU Kernels via Enzyme. Proceedings of SC’21, November 14-19, 2021, https://doi.org/10.1145/3458817.3476165
 
 * Pal, A., Ma, Y., Shah, V., and Rackauckas, C. (2021). Opening the Blackbox: Accelerating Neural Differential Equations by Regularizing Internal Solver Heuristics. Proceedings of Machine Learning Research, 139, 8325–8335. https://proceedings.mlr.press/v139/pal21a.html
