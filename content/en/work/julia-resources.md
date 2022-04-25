@@ -39,19 +39,3 @@ At the heart of differentiable programming is the ability to generate derivative
 ## Project Communication
 
 > We seek to work and communicate through Julia Language's [**Community Channels**](https://www.julialang.org/community/#community_channels)
-
-
-## Example (OLD -- TO BE REPLACED)
-
-```js
-$(window).scroll(function() {
-  // this will work when your window scrolled.
-  var scroll = $(window).scrollTop(); //getting the scrolling height of window
-  if (scroll > 100) {
-    $('.header').addClass('header-scrolled');
-  } else {
-    $('.header').removeClass('header-scrolled');
-  }
-});
-```
-
