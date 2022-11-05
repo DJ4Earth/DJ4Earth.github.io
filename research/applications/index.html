@@ -1,199 +1,38 @@
-<!doctype html><!doctype html><html lang=en>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="ie=edge">
-<title>Earth system model applications - DJ4Earth</title>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<link rel=icon href=https://dj4earth.github.iofavicon-32x32.png>
-<link rel=preconnect href=https://fonts.gstatic.com>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro&display=swap" rel=stylesheet>
-<link rel=stylesheet href=/theme.min.fe4aa9a8bed47b78a47531899f9a33897a87109d8c7d57c1a1ec18859e5a8dd1.css>
-<link rel=stylesheet href=/style.min.33528131fbe96793fc0429ca4b777304d4962034d40c8f0f02052dac61e2655a.css>
-<script>localStorage.getItem('darkMode')==='true'&&document.documentElement.setAttribute('data-mode','dark')</script>
-<meta name=description content="Differentiable programming in Earth system modeling.">
-<meta property="og:title" content="Earth system model applications">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://dj4earth.github.io/research/applications/">
-<meta property="og:description" content="Differentiable programming in Earth system modeling.">
-<meta name=twitter:card content="summary">
-<meta name=twitter:site content="@zerostaticio">
-<meta name=twitter:creator content="@zerostaticio">
-</head>
-<body class="page page-default-single">
-<div id=menu-main-mobile class=menu-main-mobile>
-<ul class=menu>
-<li class="menu-item-research active">
-<a href=https://dj4earth.github.io/research/>Research</a>
-<div class=dropdown>
-<ul class=sub-menu>
-<li>
-<a href=https://dj4earth.github.io/research/overview/>Overview</a>
-</li>
-<li>
-<a href=https://dj4earth.github.io/research/frameworks/>CI Frameworks</a>
-</li>
-<li class=active>
-<a href=https://dj4earth.github.io/research/applications/>ESM applications</a>
-</li>
-</ul>
-</div>
-</li>
-<li class=menu-item-resources>
-<a href=https://dj4earth.github.io/work/>Resources</a>
-</li>
-<li class=menu-item-team>
-<a href=https://dj4earth.github.io/team/>Team</a>
-</li>
-<li class=menu-item-news>
-<a href=https://dj4earth.github.io/blog/>News</a>
-</li>
-<li class=menu-item-publications>
-<a href=https://dj4earth.github.io/publications/>Publications</a>
-</li>
-</ul>
-</div>
-<div id=header class="header header-fixed">
-<div class=container>
-<div class=logos>
-<div class=logo>
-<a href=/>
-<img height=22px alt="DJ4Earth Logo" src=/images/logo/logo.svg>
-</a>
-</div>
-<div class=logo-invert>
-<a href=/>
-<img height=22px alt="DJ4Earth Logo" src=/images/logo/logo-invert.svg>
-</a>
-</div>
-<div class=logo-mobile>
-<a href=/>
-<img height=30px alt="DJ4Earth Logo" src=/images/logo/logo-mobile.svg>
-</a>
-</div>
-<div class=logo-invert-mobile>
-<a href=/>
-<img height=30px alt="DJ4Earth Logo" src=/images/logo/logo-invert-mobile.svg>
-</a>
-</div>
-</div>
-<div class="menu-main menu-main-nested">
-<ul>
-<li class="menu-item-research active">
-<a href=https://dj4earth.github.io/research/>Research</a>
-<div class=dropdown>
-<ul class=sub-menu>
-<li>
-<a href=https://dj4earth.github.io/research/overview/>Overview</a>
-</li>
-<li>
-<a href=https://dj4earth.github.io/research/frameworks/>CI Frameworks</a>
-</li>
-<li class=active>
-<a href=https://dj4earth.github.io/research/applications/>ESM applications</a>
-</li>
-</ul>
-</div>
-</li>
-<li class=menu-item-resources>
-<a href=https://dj4earth.github.io/work/>Resources</a>
-</li>
-<li class=menu-item-team>
-<a href=https://dj4earth.github.io/team/>Team</a>
-</li>
-<li class=menu-item-news>
-<a href=https://dj4earth.github.io/blog/>News</a>
-</li>
-<li class=menu-item-publications>
-<a href=https://dj4earth.github.io/publications/>Publications</a>
-</li>
-</ul>
-</div>
-<div class="d-none d-md-block">
-</div>
-<div id=toggle-menu-main-mobile class=hamburger-trigger>
-<button class=hamburger>Menu</button>
-</div>
-<div class="d-none d-md-block">
-<div id=dark-mode-container class=dark-mode>
-<input id=dark-mode-checkbox name=dark-mode type=checkbox class=checkbox>
-<label for=dark-mode-checkbox class=label>
-<i class="fas fa-moon"></i>
-<i class="fas fa-sun"></i>
-<div class=ball></div>
-</label>
-</div>
-</div>
-</div>
-</div>
-<div id=wrapper class=wrapper>
-<div class="strip theme-base">
-<div class=container>
-<div class=row>
-<div class="col-12 col-lg-8">
-<h1>Earth system model applications</h1>
-<h2>Differentiable programming in Earth system modeling.</h2>
-</div>
-</div>
-</div>
-</div>
-<div class=strip>
-<div class=container>
-<div class="row justify-content-start">
-<div class="col-12 col-md-8 col-lg-7">
-<div class=content><p>For this project, we will consider flagship Earth system model applications, in which adjoints have
+<!doctype html><!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><title>Earth system model applications - DJ4Earth</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=https://dj4earth.github.iofavicon-32x32.png><link rel=preconnect href=https://fonts.gstatic.com><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro&display=swap" rel=stylesheet><link rel=stylesheet href=/theme.min.fe4aa9a8bed47b78a47531899f9a33897a87109d8c7d57c1a1ec18859e5a8dd1.css><link rel=stylesheet href=/style.min.33528131fbe96793fc0429ca4b777304d4962034d40c8f0f02052dac61e2655a.css><script>localStorage.getItem("darkMode")==="true"&&document.documentElement.setAttribute("data-mode","dark")</script><meta name=description content="Differentiable programming in Earth system modeling."><meta property="og:title" content="Earth system model applications"><meta property="og:type" content="website"><meta property="og:url" content="https://dj4earth.github.io/research/applications/"><meta property="og:description" content="Differentiable programming in Earth system modeling."><meta name=twitter:card content="summary"><meta name=twitter:site content="@zerostaticio"><meta name=twitter:creator content="@zerostaticio"></head><body class='page page-default-single'><div id=menu-main-mobile class=menu-main-mobile><ul class=menu><li class="menu-item-research active"><a href=https://dj4earth.github.io/research/>Research</a><div class=dropdown><ul class=sub-menu><li><a href=https://dj4earth.github.io/research/overview/>Overview</a></li><li><a href=https://dj4earth.github.io/research/frameworks/>CI Frameworks</a></li><li class=active><a href=https://dj4earth.github.io/research/applications/>ESM applications</a></li></ul></div></li><li class=menu-item-resources><a href=https://dj4earth.github.io/work/>Resources</a></li><li class=menu-item-team><a href=https://dj4earth.github.io/team/>Team</a></li><li class=menu-item-news><a href=https://dj4earth.github.io/blog/>News</a></li><li class=menu-item-publications><a href=https://dj4earth.github.io/publications/>Publications</a></li></ul></div><div id=header class='header header-fixed'><div class=container><div class=logos><div class=logo><a href=/><img height=22px alt="DJ4Earth Logo" src=/images/logo/logo.svg></a></div><div class=logo-invert><a href=/><img height=22px alt="DJ4Earth Logo" src=/images/logo/logo-invert.svg></a></div><div class=logo-mobile><a href=/><img height=30px alt="DJ4Earth Logo" src=/images/logo/logo-mobile.svg></a></div><div class=logo-invert-mobile><a href=/><img height=30px alt="DJ4Earth Logo" src=/images/logo/logo-invert-mobile.svg></a></div></div><div class="menu-main menu-main-nested"><ul><li class="menu-item-research active"><a href=https://dj4earth.github.io/research/>Research</a><div class=dropdown><ul class=sub-menu><li><a href=https://dj4earth.github.io/research/overview/>Overview</a></li><li><a href=https://dj4earth.github.io/research/frameworks/>CI Frameworks</a></li><li class=active><a href=https://dj4earth.github.io/research/applications/>ESM applications</a></li></ul></div></li><li class=menu-item-resources><a href=https://dj4earth.github.io/work/>Resources</a></li><li class=menu-item-team><a href=https://dj4earth.github.io/team/>Team</a></li><li class=menu-item-news><a href=https://dj4earth.github.io/blog/>News</a></li><li class=menu-item-publications><a href=https://dj4earth.github.io/publications/>Publications</a></li></ul></div><div class="d-none d-md-block"></div><div id=toggle-menu-main-mobile class=hamburger-trigger><button class=hamburger>Menu</button></div><div class="d-none d-md-block"><div id=dark-mode-container class=dark-mode><input id=dark-mode-checkbox name=dark-mode type=checkbox class=checkbox>
+<label for=dark-mode-checkbox class=label><i class="fas fa-moon"></i>
+<i class="fas fa-sun"></i><div class=ball></div></label></div></div></div></div><div id=wrapper class=wrapper><div class="strip theme-base"><div class=container><div class=row><div class="col-12 col-lg-8"><h1>Earth system model applications</h1><h2>Differentiable programming in Earth system modeling.</h2></div></div></div></div><div class=strip><div class=container><div class="row justify-content-start"><div class="col-12 col-md-8 col-lg-7"><div class=content><p>For this project, we will consider flagship Earth system model applications, in which adjoints have
 had a demonstrable impact, and where convergence between SBS and SciML approaches hold the
 promise for producing transformative research.
 Differentiable programming and general-purpose AD will enable a range of derivative-based science
 applications, including formal model calibration, surrogate model training using machine learning, data
 assimilation for state estimation and model initialization, sensitivity analysis, uncertainty quantification,
-and quantitative observing system design.</p>
-<figure><img src=/images/research/ecco2-subtropics.jpg>
-</figure>
-<h2 id=ocean-climate-modeling>Ocean climate modeling</h2>
-<p>Our first domain application is an ocean general circulation model, CliMA-Ocean,
+and quantitative observing system design.</p><figure><img src=/images/research/ecco2-subtropics.jpg></figure><h2 id=ocean-climate-modeling>Ocean climate modeling</h2><p>Our first domain application is an ocean general circulation model, CliMA-Ocean,
 the ocean component of a new climate model that is currently being developed as part of the
 Climate Modeling Alliance <a href=https://clima.caltech.edu>CliMA</a> project, and a localized process model, <a href=https://clima.github.io/OceananigansDocumentation/dev/>Oceananigans.jl</a>,
 targeted at simulating small-scale ocean physics at high-resolution that affect the evolution of Earths
-climate. Both models are coded in pure Julia and run on GPUs.</p>
-<p>For two decades the Estimating the Climate of the Ocean <a href=https://ecco-group.org>(ECCO)</a> consortium has successfully harnessed
+climate. Both models are coded in pure Julia and run on GPUs.</p><p>For two decades the Estimating the Climate of the Ocean <a href=https://ecco-group.org>(ECCO)</a> consortium has successfully harnessed
 AD to enable a range of ocean science applications (beyond gradient-based optimization) in which derivative information obtained via tangent
 linear, adjoint, and Hessian operators of an underlying ocean general circulation model is a key enabling
 computational tool.
-Examples are</p>
-<ol>
-<li>ocean state estimation and parameter calibration as practiced in ECCO [51], the Arctic Subpolar North Atlantic State Estimate (ASTE, [137]), the NSF Southern Ocean Carbon and Climate Observations and Modeling project (SOCCOM, [182]), and the
-California Current System [124];</li>
-<li>comprehensive sensitivity analysis in ocean biogeochemistry [42],
+Examples are</p><ol><li>ocean state estimation and parameter calibration as practiced in ECCO [51], the Arctic Subpolar North Atlantic State Estimate (ASTE, [137]), the NSF Southern Ocean Carbon and Climate Observations and Modeling project (SOCCOM, [182]), and the
+California Current System [124];</li><li>comprehensive sensitivity analysis in ocean biogeochemistry [42],
 coastal sea level variability, ENSO prediction [56, 129], [183], Antarctic ice sheet-ocean interactions, e.g.,
 in the context of the NSF/NERC International Thwaites Collaboration [63], and Arctic coupled ocean-sea
-ice modeling [23, 138, 167];</li>
-<li>dynamical attribution of variability in support of the Overturning
-in the Subpolar North Atlantic Program (OSNAP) or the South Atlantic [87, 144, 171];</li>
-<li>linear predictability and transient non-normal amplification [126, 128, 188];</li>
-<li>uncertainty quantification and optimal observing system design.</li>
-</ol>
-<p>The application capabilities based on adjoint models go well beyond data assimilation or gradient-based
+ice modeling [23, 138, 167];</li><li>dynamical attribution of variability in support of the Overturning
+in the Subpolar North Atlantic Program (OSNAP) or the South Atlantic [87, 144, 171];</li><li>linear predictability and transient non-normal amplification [126, 128, 188];</li><li>uncertainty quantification and optimal observing system design.</li></ol><p>The application capabilities based on adjoint models go well beyond data assimilation or gradient-based
 optimization, as listed above. The proposed capabilities also enable a natural integration of
 SciML approaches for surrogate model calibration via neural networks or neural differential equations
 and uncertainty quantification within a variational data assimilation system. This approach would
 support, not only <em>process model training/calibration</em> as proposed in [165], but also, through availability
 of the full <em>backpropagation</em> tree (reverse mode AD) <em>full-model training/calibration</em> of the combined
-PDE and ML-based system. It presents a natural framework for hybrid, physics informed SciML.</p>
-<figure><img src=/images/research/ecco2-vmag.png>
-</figure>
-<h2 id=coupled-ocean-sea-ice-modeling>Coupled ocean-sea ice modeling</h2>
-<p>To be applicable for polar research, a differentiable thermodynamic and dynamic sea ice component will be developed. Fortran-based AD of the MITgcm/ECCO infrastructure has previously enabled studies of sea ice predictability by way of comprehensive sensitivity studies and dynamical attribution.</p>
-<h2 id=ice-flow-modeling>Ice flow modeling</h2>
-<p>Another compelling domain application is the use of derivative information in the context of
+PDE and ML-based system. It presents a natural framework for hybrid, physics informed SciML.</p><figure><img src=/images/research/ecco2-vmag.png></figure><h2 id=coupled-ocean-sea-ice-modeling>Coupled ocean-sea ice modeling</h2><p>To be applicable for polar research, a differentiable thermodynamic and dynamic sea ice component will be developed. Fortran-based AD of the MITgcm/ECCO infrastructure has previously enabled studies of sea ice predictability by way of comprehensive sensitivity studies and dynamical attribution.</p><h2 id=ice-flow-modeling>Ice flow modeling</h2><p>Another compelling domain application is the use of derivative information in the context of
 regional to continental-scale ice sheet modeling. Going back to the early 1990&rsquo;s, D. MacAyeal has
 convincingly demonstrated the critical role of inverse modeling approaches to comprehensively calibrate
 and initialize ice flow models for prediction. Today, adjoint methods plays a central role in ice sheet
 modeling, parameter estimation initialization for prediction. The complexity of some of the physical
 processes underlying ice flow (calving and glacial hydrology, in particular) also suggest a significant role
-for SciML approaches.</p>
-<p>While sophisticated, the new generation of ice-sheet models su?er from serious limitations, mainly because important input parameters (e.g. basal conditions, iceberg calving) cannot be measured directly or are poorly constrained by observations. AD has been applied in ice sheet modeling to tackle some of these questions. Although incredibly powerful, AD remains woefully underused in ice sheet
-modeling, primarily because of technical complexities.</p>
-<p>We will take advantage of the new development in AD and SciML within Julia to develop a
+for SciML approaches.</p><p>While sophisticated, the new generation of ice-sheet models su?er from serious limitations, mainly because important input parameters (e.g. basal conditions, iceberg calving) cannot be measured directly or are poorly constrained by observations. AD has been applied in ice sheet modeling to tackle some of these questions. Although incredibly powerful, AD remains woefully underused in ice sheet
+modeling, primarily because of technical complexities.</p><p>We will take advantage of the new development in AD and SciML within Julia to develop a
 new generation, open-source ice sheet model that is designed to take advantage of the increasing
 amount of remote sensing data collected by various agencies, to reduce the uncertainty in
 sea level rise projection.
@@ -201,11 +40,7 @@ We will reuse some of the functionalities that have been developed (e.g., partit
 integration) and follow the general structure, capabilities and parameterizations of another open-source
 code, the Ice-sheet and Sea-level System Model <a href=https://issm.jpl.nasa.gov>(ISSM)</a>.
 Laying the computational foundations, as we do in
-this project, will enable wider community engagement.</p>
-<figure><img src=/images/research/pig-tongue.png>
-</figure>
-<h2 id=uncertainty-quantification>Uncertainty quantification</h2>
-<p>UQ has emerged as a central challenge in climate science. To be of value to decision-makers, climate
+this project, will enable wider community engagement.</p><figure><img src=/images/research/pig-tongue.png></figure><h2 id=uncertainty-quantification>Uncertainty quantification</h2><p>UQ has emerged as a central challenge in climate science. To be of value to decision-makers, climate
 predictions must be accompanied by the degree of confidence we have in our model simulations. A crucial
 question is: How do we quantify uncertainties, given limitations in observational data, model inadequacy,
 our understanding of physical processes, and computational resources? A common approach in ocean
@@ -216,98 +51,14 @@ uncertain model inputs, has meant that ensemble sizes are a minute fraction of t
 of freedom in Earth system models, and that the nature of the ensemble is poorly known.
 Bayesian inverse theory provides powerful tools for UQ. Hessian UQ exploits the fact that, in a
 Gaussian approximation, the posterior error covariance is represented by the inverse Hessian, i.e., second
-derivative of the objective function with respect to the uncertain input variables</p>
-<h2 id=quantitative-observing-system-design>Quantitative observing system design</h2>
-<p>Closely related to UQ is optimal observing system
+derivative of the objective function with respect to the uncertain input variables</p><h2 id=quantitative-observing-system-design>Quantitative observing system design</h2><p>Closely related to UQ is optimal observing system
 design (OSD, [5]). It addresses (1) how to design
 an observing system, based on given or hypothetical
 assets, that minimizes the uncertainty in one
 or several target quantities of interest (e.g., heat
 transports); and (2) how to quantify the complementarity
 versus redundancy of a set of observational
-assets.</p>
-</div>
-</div>
-<div class="col-12 col-md-4 col-lg-4 offset-lg-1">
-<div class=sidebar>
-<h2>Research</h2>
-<ul>
-<li><a href=https://dj4earth.github.io/research/overview/>Project Overview</a></li>
-<li><a href=https://dj4earth.github.io/research/frameworks/>Cyberinfrastructure Frameworks</a></li>
-<li><a class=active href=https://dj4earth.github.io/research/applications/>Earth system model applications</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class=footer>
-<div class=container>
-<div class=row>
-<div class="col-12 col-md-3">
-<h3>Product</h3>
-<div class=menu-footer-primary>
-<ul>
-<li class=menu-item-research>
-<a href=/research/>Research</a>
-</li>
-<li class=menu-item-resources>
-<a href=/work/>Resources</a>
-</li>
-<li class=menu-item-team>
-<a href=/team/>Team</a>
-</li>
-</ul>
-</div>
-</div>
-<div class="col-12 col-md-3">
-<h3>Company</h3>
-<div class=menu-footer-secondary>
-<ul>
-<li class=menu-item-news>
-<a href=/blog/>News</a>
-</li>
-<li class=menu-item-publications>
-<a href=/publications/>Publications</a>
-</li>
-</ul>
-</div>
-</div>
-<div class="col-12 col-md-3">
-<h3>Support</h3>
-<div class=menu-footer-tertiary>
-<ul>
-<li class=menu-item-contact>
-<a href=/contact/>Contact</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class=row>
-<div class="col-12 pt-3">
-<div id=social class=social>
-<a href=https://www.zerostatic.io target=blank title=Twitter>
-<i class="fab fa-twitter"></i>
-</a>
-<a href=https://www.zerostatic.io target=blank title=Github>
-<i class="fab fa-github"></i>
-</a>
-<a href=https://www.zerostatic.io target=blank title=Slack>
-<i class="fab fa-slack"></i>
-</a>
-</div>
-</div>
-</div>
-<div class=row>
-<div class="col-12 pt-3">
-<div class=copyright>© 2021 DJ4Earth. All Rights Reserved.</div>
-</div>
-</div>
-</div>
-</div>
-<script type=text/javascript src=/js/darkModeBundle.min.507b3dec597426417d57919c82b00b5e4866efa4b866f95a3def8091e7a38d96.js></script>
-<script type=text/javascript src=/js/bundle.min.68121ed8d78e4b363657575249d6fed53ae2874c5616f271f6388a218478f65e.js></script>
-</body>
-</html>
+assets.</p></div></div><div class="col-12 col-md-4 col-lg-4 offset-lg-1"><div class=sidebar><h2>Research</h2><ul><li><a href=https://dj4earth.github.io/research/overview/>Project Overview</a></li><li><a href=https://dj4earth.github.io/research/frameworks/>Cyberinfrastructure Frameworks</a></li><li><a class=active href=https://dj4earth.github.io/research/applications/>Earth system model applications</a></li></ul></div></div></div></div></div></div><div class=footer><div class=container><div class=row><div class="col-12 col-md-3"><h3>Product</h3><div class=menu-footer-primary><ul><li class=menu-item-research><a href=/research/>Research</a></li><li class=menu-item-resources><a href=/work/>Resources</a></li><li class=menu-item-team><a href=/team/>Team</a></li></ul></div></div><div class="col-12 col-md-3"><h3>Company</h3><div class=menu-footer-secondary><ul><li class=menu-item-news><a href=/blog/>News</a></li><li class=menu-item-publications><a href=/publications/>Publications</a></li></ul></div></div><div class="col-12 col-md-3"><h3>Support</h3><div class=menu-footer-tertiary><ul><li class=menu-item-contact><a href=/contact/>Contact</a></li></ul></div></div></div><div class=row><div class="col-12 pt-3"><div id=social class=social><a href=https://www.zerostatic.io target=blank title=Twitter><i class="fab fa-twitter"></i></a>
+<a href=https://www.zerostatic.io target=blank title=Github><i class="fab fa-github"></i></a>
+<a href=https://www.zerostatic.io target=blank title=Slack><i class="fab fa-slack"></i></a></div></div></div><div class=row><div class="col-12 pt-3"><div class=copyright>© 2021 DJ4Earth. All Rights Reserved.</div></div></div></div></div><script type=text/javascript src=/js/darkModeBundle.min.45a50bf521b612249f67b65605ad841c1ba09a44fb93db17042e9526042ad5ee.js></script>
+<script type=text/javascript src=/js/bundle.min.2d08db634246c37a7ebb2c00df950985bedf287b4213cc3c35c701871fd4fea3.js></script></body></html>

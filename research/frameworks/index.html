@@ -1,288 +1,36 @@
-<!doctype html><!doctype html><html lang=en>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="ie=edge">
-<title>Cyberinfrastructure Frameworks - DJ4Earth</title>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<link rel=icon href=https://dj4earth.github.iofavicon-32x32.png>
-<link rel=preconnect href=https://fonts.gstatic.com>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro&display=swap" rel=stylesheet>
-<link rel=stylesheet href=/theme.min.fe4aa9a8bed47b78a47531899f9a33897a87109d8c7d57c1a1ec18859e5a8dd1.css>
-<link rel=stylesheet href=/style.min.33528131fbe96793fc0429ca4b777304d4962034d40c8f0f02052dac61e2655a.css>
-<script>localStorage.getItem('darkMode')==='true'&&document.documentElement.setAttribute('data-mode','dark')</script>
-<meta name=description content="Developing general-purpose automatic differentiation in Julia.">
-<meta property="og:title" content="Cyberinfrastructure Frameworks">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://dj4earth.github.io/research/frameworks/">
-<meta property="og:description" content="Developing general-purpose automatic differentiation in Julia.">
-<meta name=twitter:card content="summary">
-<meta name=twitter:site content="@zerostaticio">
-<meta name=twitter:creator content="@zerostaticio">
-</head>
-<body class="page page-default-single">
-<div id=menu-main-mobile class=menu-main-mobile>
-<ul class=menu>
-<li class="menu-item-research active">
-<a href=https://dj4earth.github.io/research/>Research</a>
-<div class=dropdown>
-<ul class=sub-menu>
-<li>
-<a href=https://dj4earth.github.io/research/overview/>Overview</a>
-</li>
-<li class=active>
-<a href=https://dj4earth.github.io/research/frameworks/>CI Frameworks</a>
-</li>
-<li>
-<a href=https://dj4earth.github.io/research/applications/>ESM applications</a>
-</li>
-</ul>
-</div>
-</li>
-<li class=menu-item-resources>
-<a href=https://dj4earth.github.io/work/>Resources</a>
-</li>
-<li class=menu-item-team>
-<a href=https://dj4earth.github.io/team/>Team</a>
-</li>
-<li class=menu-item-news>
-<a href=https://dj4earth.github.io/blog/>News</a>
-</li>
-<li class=menu-item-publications>
-<a href=https://dj4earth.github.io/publications/>Publications</a>
-</li>
-</ul>
-</div>
-<div id=header class="header header-fixed header-transparent">
-<div class=container>
-<div class=logos>
-<div class=logo>
-<a href=/>
-<img height=22px alt="DJ4Earth Logo" src=/images/logo/logo.svg>
-</a>
-</div>
-<div class=logo-invert>
-<a href=/>
-<img height=22px alt="DJ4Earth Logo" src=/images/logo/logo-invert.svg>
-</a>
-</div>
-<div class=logo-mobile>
-<a href=/>
-<img height=30px alt="DJ4Earth Logo" src=/images/logo/logo-mobile.svg>
-</a>
-</div>
-<div class=logo-invert-mobile>
-<a href=/>
-<img height=30px alt="DJ4Earth Logo" src=/images/logo/logo-invert-mobile.svg>
-</a>
-</div>
-</div>
-<div class="menu-main menu-main-nested">
-<ul>
-<li class="menu-item-research active">
-<a href=https://dj4earth.github.io/research/>Research</a>
-<div class=dropdown>
-<ul class=sub-menu>
-<li>
-<a href=https://dj4earth.github.io/research/overview/>Overview</a>
-</li>
-<li class=active>
-<a href=https://dj4earth.github.io/research/frameworks/>CI Frameworks</a>
-</li>
-<li>
-<a href=https://dj4earth.github.io/research/applications/>ESM applications</a>
-</li>
-</ul>
-</div>
-</li>
-<li class=menu-item-resources>
-<a href=https://dj4earth.github.io/work/>Resources</a>
-</li>
-<li class=menu-item-team>
-<a href=https://dj4earth.github.io/team/>Team</a>
-</li>
-<li class=menu-item-news>
-<a href=https://dj4earth.github.io/blog/>News</a>
-</li>
-<li class=menu-item-publications>
-<a href=https://dj4earth.github.io/publications/>Publications</a>
-</li>
-</ul>
-</div>
-<div class="d-none d-md-block">
-</div>
-<div id=toggle-menu-main-mobile class=hamburger-trigger>
-<button class=hamburger>Menu</button>
-</div>
-<div class="d-none d-md-block">
-<div id=dark-mode-container class=dark-mode>
-<input id=dark-mode-checkbox name=dark-mode type=checkbox class=checkbox>
-<label for=dark-mode-checkbox class=label>
-<i class="fas fa-moon"></i>
-<i class="fas fa-sun"></i>
-<div class=ball></div>
-</label>
-</div>
-</div>
-</div>
-</div>
-<div id=wrapper class=wrapper>
-<div class="hero theme-primary" style="background-image:url(https://source.unsplash.com/ubIWo074QlU/1600x900),linear-gradient(to right,var(--color-primary),var(--color-primary-offset));background-blend-mode:overlay">
-<div class=container>
-<div class="row align-items-center">
-<div class="col-12 col-md-6">
-<div class=hero-text>
-<h1>Cyberinfrastructure Frameworks</h1>
-<p>Developing general-purpose automatic differentiation in Julia.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class=strip>
-<div class=container>
-<div class="row justify-content-start">
-<div class="col-12 col-md-8 col-lg-7">
-<div class=content><h1 id=current-ad-capabilities-in-julia>Current AD capabilities in Julia</h1>
-<p>We list here current efforts in the Julia community that have a certain continuity within projects. A comprehensive list is maintained at <a href=https://juliadiff.org>JuliaDiff.org</a>.</p>
-<ul>
-<li><em><strong>ForwardDiff.jl</strong></em> is a forward differentiation tool implemented in an overloading fashion by doing a
-datatype change. This data type is compatible with array types used for GPU computations, thus allowing transparent differentiation for GPUs.</li>
-<li><em><strong>ReverseDiff.jl</strong></em> is a reverse or adjoint differentiation tool, commonly referred to as &lsquo;backpropagation&rsquo;
+<!doctype html><!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><title>Cyberinfrastructure Frameworks - DJ4Earth</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=https://dj4earth.github.iofavicon-32x32.png><link rel=preconnect href=https://fonts.gstatic.com><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro&display=swap" rel=stylesheet><link rel=stylesheet href=/theme.min.fe4aa9a8bed47b78a47531899f9a33897a87109d8c7d57c1a1ec18859e5a8dd1.css><link rel=stylesheet href=/style.min.33528131fbe96793fc0429ca4b777304d4962034d40c8f0f02052dac61e2655a.css><script>localStorage.getItem("darkMode")==="true"&&document.documentElement.setAttribute("data-mode","dark")</script><meta name=description content="Developing general-purpose automatic differentiation in Julia."><meta property="og:title" content="Cyberinfrastructure Frameworks"><meta property="og:type" content="website"><meta property="og:url" content="https://dj4earth.github.io/research/frameworks/"><meta property="og:description" content="Developing general-purpose automatic differentiation in Julia."><meta name=twitter:card content="summary"><meta name=twitter:site content="@zerostaticio"><meta name=twitter:creator content="@zerostaticio"></head><body class='page page-default-single'><div id=menu-main-mobile class=menu-main-mobile><ul class=menu><li class="menu-item-research active"><a href=https://dj4earth.github.io/research/>Research</a><div class=dropdown><ul class=sub-menu><li><a href=https://dj4earth.github.io/research/overview/>Overview</a></li><li class=active><a href=https://dj4earth.github.io/research/frameworks/>CI Frameworks</a></li><li><a href=https://dj4earth.github.io/research/applications/>ESM applications</a></li></ul></div></li><li class=menu-item-resources><a href=https://dj4earth.github.io/work/>Resources</a></li><li class=menu-item-team><a href=https://dj4earth.github.io/team/>Team</a></li><li class=menu-item-news><a href=https://dj4earth.github.io/blog/>News</a></li><li class=menu-item-publications><a href=https://dj4earth.github.io/publications/>Publications</a></li></ul></div><div id=header class='header header-fixed header-transparent'><div class=container><div class=logos><div class=logo><a href=/><img height=22px alt="DJ4Earth Logo" src=/images/logo/logo.svg></a></div><div class=logo-invert><a href=/><img height=22px alt="DJ4Earth Logo" src=/images/logo/logo-invert.svg></a></div><div class=logo-mobile><a href=/><img height=30px alt="DJ4Earth Logo" src=/images/logo/logo-mobile.svg></a></div><div class=logo-invert-mobile><a href=/><img height=30px alt="DJ4Earth Logo" src=/images/logo/logo-invert-mobile.svg></a></div></div><div class="menu-main menu-main-nested"><ul><li class="menu-item-research active"><a href=https://dj4earth.github.io/research/>Research</a><div class=dropdown><ul class=sub-menu><li><a href=https://dj4earth.github.io/research/overview/>Overview</a></li><li class=active><a href=https://dj4earth.github.io/research/frameworks/>CI Frameworks</a></li><li><a href=https://dj4earth.github.io/research/applications/>ESM applications</a></li></ul></div></li><li class=menu-item-resources><a href=https://dj4earth.github.io/work/>Resources</a></li><li class=menu-item-team><a href=https://dj4earth.github.io/team/>Team</a></li><li class=menu-item-news><a href=https://dj4earth.github.io/blog/>News</a></li><li class=menu-item-publications><a href=https://dj4earth.github.io/publications/>Publications</a></li></ul></div><div class="d-none d-md-block"></div><div id=toggle-menu-main-mobile class=hamburger-trigger><button class=hamburger>Menu</button></div><div class="d-none d-md-block"><div id=dark-mode-container class=dark-mode><input id=dark-mode-checkbox name=dark-mode type=checkbox class=checkbox>
+<label for=dark-mode-checkbox class=label><i class="fas fa-moon"></i>
+<i class="fas fa-sun"></i><div class=ball></div></label></div></div></div></div><div id=wrapper class=wrapper><div class="hero theme-primary" style="background-image:url(https://source.unsplash.com/ubIWo074QlU/1600x900),linear-gradient(to right,var(--color-primary),var(--color-primary-offset));background-blend-mode:overlay"><div class=container><div class="row align-items-center"><div class="col-12 col-md-6"><div class=hero-text><h1>Cyberinfrastructure Frameworks</h1><p>Developing general-purpose automatic differentiation in Julia.</p></div></div></div></div></div><div class=strip><div class=container><div class="row justify-content-start"><div class="col-12 col-md-8 col-lg-7"><div class=content><h1 id=current-ad-capabilities-in-julia>Current AD capabilities in Julia</h1><p>We list here current efforts in the Julia community that have a certain continuity within projects. A comprehensive list is maintained at <a href=https://juliadiff.org>JuliaDiff.org</a>.</p><ul><li><em><strong>ForwardDiff.jl</strong></em> is a forward differentiation tool implemented in an overloading fashion by doing a
+datatype change. This data type is compatible with array types used for GPU computations, thus allowing transparent differentiation for GPUs.</li><li><em><strong>ReverseDiff.jl</strong></em> is a reverse or adjoint differentiation tool, commonly referred to as &lsquo;backpropagation&rsquo;
 in deep learning. It uses a classic tape implementation but allows for JIT compilation of the resulting
 tape via the Julia compiler to allow for fast backwards passes. It has its roots in the development of
 JuMP.jl, an algebraic modeling framework for optimization. However, ReverseDi? does not meet all the
-restrictions given by a GPU code and fails to be applied to GPU kernels.</li>
-<li><em><strong>Enzyme.jl</strong></em> is a language agnostic reverse mode AD framework, that operates over optimized
-LLVM IR. Enzyme integrates well with the Julia based AD tooling and allows the di?erentiation of legacy
-code bases that use C/C++ libraries. Current development of Enzyme focuses on AD for GPU kernels
-and it may be an avenue for Julia based AD to synthesize e?cient gradients for GPU based codes.</li>
-<li><em><strong>Zygote.jl</strong></em> implements reverse AD by directly accessing the untyped Julia AST. Its original user
+restrictions given by a GPU code and fails to be applied to GPU kernels.</li><li><em><strong>Enzyme.jl</strong></em> is a language agnostic forward and reverse mode AD framework, that operates over optimized
+LLVM IR. Enzyme integrates well with the Julia based AD tooling and allows the differentiation of legacy
+code bases that use C/C++ libraries. Current development of Enzyme focuses on AD for parallelism (GPU kernels, OpenMP, MPI, Julia Tasks)
+and it may be an avenue for Julia based AD to synthesize effcient gradients for parallel codes.</li><li><em><strong>Zygote.jl</strong></em> implements reverse AD by directly accessing the untyped Julia AST. Its original user
 base was around ML, which required leveraging of GPUs. While in theory Zygote could apply to any
 code in Julia, in practice the restrictions on the code are still substantial (e.g. lack of support for
 static arrays and mutation) which puts limitations on the types of pre-existing code. For example, the
-CliMA-Ocean model makes heavy use of mutation to have non-allocating distributed and GPU code.</li>
-<li><em><strong>Diffractor.jl</strong></em> is a next-generation intermediate representation-level source to source reverse-mode (and forward-mode) AD tool.
-It is currently in development.</li>
-</ul>
-<blockquote>
-<p>As an ecosystem, the ability to switch between AD backends is well-recognized and used.
+CliMA-Ocean model makes heavy use of mutation to have non-allocating distributed and GPU code.</li><li><em><strong>Diffractor.jl</strong></em> is a next-generation intermediate representation-level source to source reverse-mode (and forward-mode) AD tool.
+It is currently in development.</li></ul><blockquote><p>As an ecosystem, the ability to switch between AD backends is well-recognized and used.
 This is possible because all of the Julia AD backends target the Julia AST and can thus be
 composed as well: e.g. Zygote can be used to differentiate code with ReverseDiff and ForwardDiff. The
 <a href=https://juliadiff.org/ChainRulesCore.jl/stable/index.html><strong>ChainRules.jl</strong></a> library gives a central repository for dispatch-based forward and reverse rulesets for the AD
 tools to build on, so extending the AD frameworks can to be done in a manner that is independent of the
-AD package.</p>
-</blockquote>
-<h2 id=proposed-ad-framework-in-julia>Proposed AD Framework in Julia</h2>
-<p>Our goal is to provide a new foundation for AD in Julia which can be applied to large-scale PDE
+AD package.</p></blockquote><h2 id=proposed-ad-framework-in-julia>Proposed AD Framework in Julia</h2><p>Our goal is to provide a new foundation for AD in Julia which can be applied to large-scale PDE
 problems, while retaining the flexibility and portability of Julia, especially for heterogeneous architectures
 (GPUs, ARM, X86 64).
 Recent developments to the Julia compiler allow for user compiler extensions to
 be written to act on the typed intermediate representation (IR) of the lowered Julia abstract syntax tree
 (AST).
-A new AD mechanism, <strong>Diffractor.jl</strong>, has demonstrated that it can overcome core efficiency issues unhandled in Zygote.jl for ML, and the main ML frameworks, Flux.jl and KNet.jl, are
-scheduled to adopt this AD back end as the core backpropogation mechanism.</p>
-<blockquote>
-<p>Our plan is to develop compilation passes which augment <a href=https://juliadiff.org/Diffractor.jl/dev/><strong>Diffractor.jl</strong></a> and give support for high-performance scientific computing infrastructure in this same
+Two new AD mechanisms, <strong>Diffractor.jl</strong> and <strong>Enzyme.jl</strong>, have demonstrated that they can overcome core efficiency usability issues unhandled in Zygote.jl for ML, and the main ML frameworks, Flux.jl and KNet.jl, are
+scheduled to adopt these AD back ends as core backpropogation mechanisms.</p><blockquote><p>Our plan is to develop compilation passes which augment <a href=https://juliadiff.org/Diffractor.jl/dev/><strong>Diffractor.jl</strong></a> and <a href=https://enzyme.mit.edu><strong>Enzyme.jl</strong></a> to give support for high-performance scientific computing infrastructure in this same
 framework, allowing it to effectively be the first open source source-to-source optimizing AD framework
 on a high performance high level language that can support all of the language constructs to allow for
 both a machine learning and a climate model to be differentiated without users having to perform code
-modifications.</p>
-</blockquote>
-<h2 id=proposed-framework-extensions>Proposed framework extensions</h2>
-<p>Researchers from U. Chicago, in collaboration with MIT Julia Lab, will implement several extensions to
-the core framework. These already exist in part in various mature AD tools such as OpenAD and TAF. These extensions will target:</p>
-<ul>
-<li><strong>Program Analysis</strong></li>
-<li><strong>Objects and Mutation</strong></li>
-<li><strong>Checkpointing</strong></li>
-<li><strong>Sparse Derivatives</strong></li>
-<li><strong>Parallelism</strong></li>
-<li><strong>Nonsmooth Computation</strong></li>
-<li><strong>Jacobian Scarcity</strong></li>
-</ul>
-<p>These extensions will be implemented in a tool-agnostic manner, such that they can be deployed in different AD tools, e.g., Enzyme.jl and Diffractor.jl.</p>
-</div>
-</div>
-<div class="col-12 col-md-4 col-lg-4 offset-lg-1">
-<div class=sidebar>
-<h2>Research</h2>
-<ul>
-<li><a href=https://dj4earth.github.io/research/overview/>Project Overview</a></li>
-<li><a class=active href=https://dj4earth.github.io/research/frameworks/>Cyberinfrastructure Frameworks</a></li>
-<li><a href=https://dj4earth.github.io/research/applications/>Earth system model applications</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class=footer>
-<div class=container>
-<div class=row>
-<div class="col-12 col-md-3">
-<h3>Product</h3>
-<div class=menu-footer-primary>
-<ul>
-<li class=menu-item-research>
-<a href=/research/>Research</a>
-</li>
-<li class=menu-item-resources>
-<a href=/work/>Resources</a>
-</li>
-<li class=menu-item-team>
-<a href=/team/>Team</a>
-</li>
-</ul>
-</div>
-</div>
-<div class="col-12 col-md-3">
-<h3>Company</h3>
-<div class=menu-footer-secondary>
-<ul>
-<li class=menu-item-news>
-<a href=/blog/>News</a>
-</li>
-<li class=menu-item-publications>
-<a href=/publications/>Publications</a>
-</li>
-</ul>
-</div>
-</div>
-<div class="col-12 col-md-3">
-<h3>Support</h3>
-<div class=menu-footer-tertiary>
-<ul>
-<li class=menu-item-contact>
-<a href=/contact/>Contact</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class=row>
-<div class="col-12 pt-3">
-<div id=social class=social>
-<a href=https://www.zerostatic.io target=blank title=Twitter>
-<i class="fab fa-twitter"></i>
-</a>
-<a href=https://www.zerostatic.io target=blank title=Github>
-<i class="fab fa-github"></i>
-</a>
-<a href=https://www.zerostatic.io target=blank title=Slack>
-<i class="fab fa-slack"></i>
-</a>
-</div>
-</div>
-</div>
-<div class=row>
-<div class="col-12 pt-3">
-<div class=copyright>© 2021 DJ4Earth. All Rights Reserved.</div>
-</div>
-</div>
-</div>
-</div>
-<script type=text/javascript src=/js/darkModeBundle.min.507b3dec597426417d57919c82b00b5e4866efa4b866f95a3def8091e7a38d96.js></script>
-<script type=text/javascript src=/js/bundle.min.68121ed8d78e4b363657575249d6fed53ae2874c5616f271f6388a218478f65e.js></script>
-</body>
-</html>
+modifications.</p></blockquote><h2 id=proposed-framework-extensions>Proposed framework extensions</h2><p>Researchers from U. Chicago, in collaboration with MIT Julia Lab, will implement several extensions to
+the core framework. These already exist in part in various mature AD tools such as OpenAD and TAF. These extensions will target:</p><ul><li><strong>Program Analysis</strong></li><li><strong>Objects and Mutation</strong></li><li><strong>Checkpointing</strong></li><li><strong>Sparse Derivatives</strong></li><li><strong>Parallelism</strong></li><li><strong>Nonsmooth Computation</strong></li><li><strong>Jacobian Scarcity</strong></li></ul><p>These extensions will be implemented in a tool-agnostic manner, such that they can be deployed in different AD tools, e.g., Enzyme.jl and Diffractor.jl.</p></div></div><div class="col-12 col-md-4 col-lg-4 offset-lg-1"><div class=sidebar><h2>Research</h2><ul><li><a href=https://dj4earth.github.io/research/overview/>Project Overview</a></li><li><a class=active href=https://dj4earth.github.io/research/frameworks/>Cyberinfrastructure Frameworks</a></li><li><a href=https://dj4earth.github.io/research/applications/>Earth system model applications</a></li></ul></div></div></div></div></div></div><div class=footer><div class=container><div class=row><div class="col-12 col-md-3"><h3>Product</h3><div class=menu-footer-primary><ul><li class=menu-item-research><a href=/research/>Research</a></li><li class=menu-item-resources><a href=/work/>Resources</a></li><li class=menu-item-team><a href=/team/>Team</a></li></ul></div></div><div class="col-12 col-md-3"><h3>Company</h3><div class=menu-footer-secondary><ul><li class=menu-item-news><a href=/blog/>News</a></li><li class=menu-item-publications><a href=/publications/>Publications</a></li></ul></div></div><div class="col-12 col-md-3"><h3>Support</h3><div class=menu-footer-tertiary><ul><li class=menu-item-contact><a href=/contact/>Contact</a></li></ul></div></div></div><div class=row><div class="col-12 pt-3"><div id=social class=social><a href=https://www.zerostatic.io target=blank title=Twitter><i class="fab fa-twitter"></i></a>
+<a href=https://www.zerostatic.io target=blank title=Github><i class="fab fa-github"></i></a>
+<a href=https://www.zerostatic.io target=blank title=Slack><i class="fab fa-slack"></i></a></div></div></div><div class=row><div class="col-12 pt-3"><div class=copyright>© 2021 DJ4Earth. All Rights Reserved.</div></div></div></div></div><script type=text/javascript src=/js/darkModeBundle.min.45a50bf521b612249f67b65605ad841c1ba09a44fb93db17042e9526042ad5ee.js></script>
+<script type=text/javascript src=/js/bundle.min.2d08db634246c37a7ebb2c00df950985bedf287b4213cc3c35c701871fd4fea3.js></script></body></html>
